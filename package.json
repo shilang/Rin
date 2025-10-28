@@ -30,8 +30,6 @@
     "tailwindcss": "^3.4.3",
     "turbo": "^1.13.3",
     "vitest": "1.6.1",
-    "@types/lodash": "^4.17.7",
-    "@types/react-syntax-highlighter": "^15.5.13",
     "@sinclair/typebox": "^0.34.41"
   },
   "dependencies": {
