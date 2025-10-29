@@ -1,4 +1,4 @@
-import { Elysia, ValidationError, getSchemaValidator } from 'elysia'
+import { Elysia, ValidationError, getSchemaValidator, t, type TSchema, type Static } from 'elysia'
 
 import {
     SignJWT,
@@ -8,8 +8,7 @@ import {
     type KeyLike
 } from 'jose'
 
-import { Type as t } from '@sinclair/typebox'
-import type { Static, TSchema } from '@sinclair/typebox'
+// Use Elysia's re-exported TypeBox types to ensure type compatibility
 
 type UnwrapSchema<
     Schema extends TSchema | undefined,
@@ -24,6 +23,8 @@ export interface JWTPayloadSpec {
     nbf?: number
     exp?: number
     iat?: number
+    // Custom claim used by Rin
+    id?: number
 }
 
 export interface JWTOption<
